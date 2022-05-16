@@ -8,9 +8,18 @@ h1{
 
 h2{
     font-size: 30px;
-    color: black;
+    color: whitesmoke;
     align-content: center;
     float: left;
+    text-shadow: 2px 2px black;
+}
+h3{
+    font-size: 25px;
+    color: whitesmoke;
+    font-weight: 600;
+    align-content: center;
+    padding-left: 600px;
+    text-shadow: 2px 2px black;
 }
 
 table{
