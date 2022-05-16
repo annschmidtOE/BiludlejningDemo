@@ -19,8 +19,10 @@ public class RentalDealController {
     public String rentalDeal(Model model){
         List<RentalDeal> rentalDealList = rentalDealService.fetchAll();
         model.addAttribute("rentalDeals", rentalDealList);
-        String msg = ("Forventet betaling pr måned: "+expectedPayment((ArrayList<RentalDeal>) rentalDealList));
+        String msg = ("Forventet betaling nuværende måned: "+expectedPayment((ArrayList<RentalDeal>) rentalDealList));
         model.addAttribute("message",msg);
+        String msg1 = ("Antal udlejede biler denne måned: "+rentedCars(rentalDealList));
+        model.addAttribute("message1",msg1);
         return "/rentalDeals";
     }
 
@@ -42,6 +44,11 @@ public class RentalDealController {
             expectedPay+=sum;
         }
         return expectedPay;
+    }
+
+    public int rentedCars(List<RentalDeal> rentalDeals){
+        int rentedCars = rentalDeals.size();
+        return rentedCars;
     }
 
 
