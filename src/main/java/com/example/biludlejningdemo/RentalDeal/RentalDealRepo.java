@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,13 +30,5 @@ public class RentalDealRepo {
                 rentalDeal.getDamageBefore(),rentalDeal.getDamageAfter());
     }
 
-    public double totalPrice(List<RentalDeal> rentalDealList, RentalDeal rentalDeal){
-        Iterator iterator = rentalDealList.listIterator();
-        double totalPrice = 0;
-        for (int i = 0; i < rentalDealList.size(); i++) {
-            totalPrice=totalPrice+rentalDeal.getPrice();
-        }
-        return totalPrice;
-    }
 
 }

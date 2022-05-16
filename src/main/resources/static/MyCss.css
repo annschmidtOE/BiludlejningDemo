@@ -10,7 +10,7 @@ h2{
     font-size: 30px;
     color: whitesmoke;
     align-content: center;
-    margin-left: 120px;
+    float: left;
     text-shadow: 2px 2px black;
 }
 
