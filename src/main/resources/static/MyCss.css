@@ -8,10 +8,10 @@ h1{
 
 h2{
     font-size: 30px;
-    color: whitesmoke;
+    color: black;
     align-content: center;
     float: left;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px whitesmoke;
 }
 
 table{

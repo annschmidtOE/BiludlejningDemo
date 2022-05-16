@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -20,7 +19,8 @@ public class RentalDealController {
     public String rentalDeal(Model model){
         List<RentalDeal> rentalDealList = rentalDealService.fetchAll();
         model.addAttribute("rentalDeals", rentalDealList);
-        System.out.println(expectedPayment((ArrayList<RentalDeal>) rentalDealList));
+        String msg = ("Forventet betaling pr måned: "+expectedPayment((ArrayList<RentalDeal>) rentalDealList));
+        model.addAttribute("message",msg);
         return "/rentalDeals";
     }
 

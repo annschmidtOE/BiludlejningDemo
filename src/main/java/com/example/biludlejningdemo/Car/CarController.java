@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 @Controller
 public class CarController {
@@ -17,7 +18,6 @@ public class CarController {
     public String cars(Model model){
         List<Car> carList = carService.fetchAll();
         model.addAttribute("cars", carList);
-       // System.out.println(carList);
         return "/cars";
     }
 
