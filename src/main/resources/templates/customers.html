@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kunder</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MyCss.css"> <!--External stylesheet-->  <!-- Internal stylesheet for styling background -->
+    <style>
+        html{
+            background: url("raceCars.webp") no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Abyssinica SIL";
+        }
+
+    </style>
+
+    <ul>
+        <li><a href="index.html">Hjem <i class='fas fa-home'></i></a></li>
+        <li><a href="cars.html">Se biler <i class='fas fa-car-alt'></i></a></li>
+        <li><a href="customers.html">Se kunder <i class='fas fa-address-card'></i></a></li>
+        <li><a href="rentalDeals.html">Se leje-kontrakter <i class='fas fa-book'></i></a></li>
+        <li><a href="/newRentalDeal.html">Ny leje-kontrakt <i class='far fa-clipboard'></i></a></li>
+        <li><a href="/newCar.html">Ny bil <i class='fas fa-truck-pickup'></i></a></li>
+        <li><a href="/newCustomer.html">Ny kunde <i class='fas fa-address-book'></i>
+        </a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <h2>Alle Kunder</h2>
+        <th>ID</th>
+        <th>Kørekort nummer</th>
+        <th>Fornavn</th>
+        <th>Efternavn</th>
+        <th>Telefon nummer</th>
+        <th>Mail</th>
+        <th>Zip</th>
+        <th>City</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer: ${customers}">
+        <td th:text="${customer.customerID}"/>
+        <td th:text="${customer.driverLicenceNumber}"/>
+        <td th:text="${customer.firstName}"/>
+        <td th:text="${customer.lastName}"/>
+        <td th:text="${customer.phone}"/>
+        <td th:text="${customer.mail}"/>
+        <td th:text="${customer.zip}"/>
+        <td th:text="${customer.city}"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

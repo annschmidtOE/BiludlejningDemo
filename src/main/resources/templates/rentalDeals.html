@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kunder</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MyCss.css"> <!--External stylesheet-->  <!-- Internal stylesheet for styling background -->
+    <style>
+        html{
+            background: url("raceCars.webp") no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Abyssinica SIL";
+        }
+
+    </style>
+
+    <ul>
+        <li><a href="index.html">Hjem <i class='fas fa-home'></i></a></li>
+        <li><a href="cars.html">Se biler <i class='fas fa-car-alt'></i></a></li>
+        <li><a href="customers.html">Se kunder <i class='fas fa-address-card'></i></a></li>
+        <li><a href="rentalDeals.html">Se leje-kontrakter <i class='fas fa-book'></i></a></li>
+        <li><a href="/newRentalDeal.html">Ny leje-kontrakt <i class='far fa-clipboard'></i></a></li>
+        <li><a href="/newCar.html">Ny bil <i class='fas fa-truck-pickup'></i></a></li>
+        <li><a href="/newCustomer.html">Ny kunde <i class='fas fa-address-book'></i>
+        </a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+</head>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <h2>Alle Lejekontrakter</h2>
+        <th>ID</th>
+        <th>Kunde ID</th>
+        <th>Bil ID</th>
+        <th>Abonnement</th>
+        <th>Pris</th>
+        <th>Afhentnings lokation</th>
+        <th>Afleverings lokation</th>
+        <th>Skader før</th>
+        <th>Skader efter</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rentalDeal: ${rentalDeals}">
+        <td th:text="${rentalDeal.rentalID}"/>
+        <td th:text="${rentalDeal.customerID}"/>
+        <td th:text="${rentalDeal.carID}"/>
+        <td th:text="${rentalDeal.sub}"/>
+        <td th:text="${rentalDeal.pickUpLocation}"/>
+        <td th:text="${rentalDeal.dropOffLocation}"/>
+        <td th:text="${rentalDeal.damageBefore}"/>
+        <td th:text="${rentalDeal.damageAfter}"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

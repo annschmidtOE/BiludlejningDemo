@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MyCss.css"> <!--External stylesheet-->  <!-- Internal stylesheet for styling background -->
+    <style>
+        html{
+            background: url("raceCars.webp") no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Abyssinica SIL";
+        }
+
+    </style>
+
+    <ul>
+        <li><a href="index.html">Hjem <i class='fas fa-home'></i></a></li>
+        <li><a href="cars.html">Se biler <i class='fas fa-car-alt'></i></a></li>
+        <li><a href="customers.html">Se kunder <i class='fas fa-address-card'></i></a></li>
+        <li><a href="rentalDeals.html">Se leje-kontrakter <i class='fas fa-book'></i></a></li>
+        <li><a href="/newRentalDeal.html">Ny leje-kontrakt <i class='far fa-clipboard'></i></a></li>
+        <li><a href="/newCar.html">Ny bil <i class='fas fa-truck-pickup'></i></a></li>
+        <li><a href="/newCustomer.html">Ny kunde <i class='fas fa-address-book'></i>
+        </a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <h2>Alle biler</h2>
+        <th>ID</th>
+        <th>Bil mærke</th>
+        <th>Model</th>
+        <th>Månedlig pris</th>
+        <th>Gear</th>
+        <th>Brandstof</th>
+        <th>c02 udslip</th>
+        <th>Km pr liter</th>
+        <th>Skader</th>
+        <th>Ledighed</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.ID}"/>
+        <td th:text="${car.brand}"/>
+        <td th:text="${car.model}"/>
+        <td th:text="${car.pricePrMonth}"/>
+        <td th:text="${car.gear}"/>
+        <td th:text="${car.fuel}"/>
+        <td th:text="${car.c02}"/>
+        <td th:text="${car.kmPrLiter}"/>
+        <td th:text="${car.damages}"/>
+        <td th:text="${car.availability}"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

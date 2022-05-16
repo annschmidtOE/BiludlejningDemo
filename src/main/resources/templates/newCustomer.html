@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ny Bil</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MyCss.css"> <!--External stylesheet-->  <!-- Internal stylesheet for styling background -->
+    <style>
+        html{
+            background: url("twoCars.jpg") no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Abyssinica SIL";
+        }
+
+    </style>
+
+    <ul>
+        <li><a href="index.html">Hjem <i class='fas fa-home'></i></a></li>
+        <li><a href="cars.html">Se biler <i class='fas fa-car-alt'></i></a></li>
+        <li><a href="customers.html">Se kunder <i class='fas fa-address-card'></i></a></li>
+        <li><a href="rentalDeals.html">Se leje-kontrakter <i class='fas fa-book'></i></a></li>
+        <li><a href="/newRentalDeal.html">Ny leje-kontrakt <i class='far fa-clipboard'></i></a></li>
+        <li><a href="/newCar.html">Ny bil <i class='fas fa-truck-pickup'></i></a></li>
+        <li><a href="/newCustomer.html">Ny kunde <i class='fas fa-address-book'></i>
+        </a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+</head>
+<body>
+<h2>Opret ny kunde</h2>
+<div id="createNew">
+<form action ="/newCustomer" method="post">
+    <label>Kørekort nummer</label>
+    <input type="text" name="driverLicenceNumber" placeholder="Kørekort nummer">
+    <br>
+    <label>Fornavn</label>
+    <input type="text" name="firstName" placeholder="Kundens fornavn">
+    <br>
+    <label>Efternavn</label>
+    <input type="text" name="lastName" placeholder="Kundens efternavn">
+    <br>
+    <label>Nummer</label>
+    <input type="text" name="phone" placeholder="Telefon nummer">
+    <br>
+    <label>Mail</label>
+    <input type="text" name="mail" placeholder="Mail">
+    <br>
+    <label>Zip</label>
+    <input type="text" name="zip" placeholder="Zip kode">
+    <br>
+    <label>By</label>
+    <input type="text" name="city" placeholder="By">
+    <br>
+    <input type="submit" value="Opret kunde" style="background-color: white">
+    <br>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ny Bil</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MyCss.css"> <!--External stylesheet-->  <!-- Internal stylesheet for styling background -->
+    <style>
+        html{
+            background: url("twoCars.jpg") no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Abyssinica SIL";
+        }
+
+    </style>
+
+    <ul>
+        <li><a href="index.html">Hjem <i class='fas fa-home'></i></a></li>
+        <li><a href="cars.html">Se biler <i class='fas fa-car-alt'></i></a></li>
+        <li><a href="customers.html">Se kunder <i class='fas fa-address-card'></i></a></li>
+        <li><a href="rentalDeals.html">Se leje-kontrakter <i class='fas fa-book'></i></a></li>
+        <li><a href="/newRentalDeal.html">Ny leje-kontrakt <i class='far fa-clipboard'></i></a></li>
+        <li><a href="/newCar.html">Ny bil <i class='fas fa-truck-pickup'></i></a></li>
+        <li><a href="/newCustomer.html">Ny kunde <i class='fas fa-address-book'></i>
+        </a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+</head>
+<body>
+<h2>Opret ny bil</h2>
+<div id="createNew">
+<form action ="/newCar" method="post">
+    <label>Bil mærke</label>
+    <input type="text" name="brand" placeholder="Bil mærke">
+    <br>
+    <label>Bil model</label>
+    <input type="text" name="model" placeholder="Model">
+    <br>
+    <label>Månedlig pris</label>
+    <input type="text" name="pricePrMonth" placeholder="Pris pr måned">
+    <br>
+    <label>Gear type</label>
+    <input type="text" name="gear" placeholder="Gear type">
+    <br>
+    <label>Brændstof</label>
+    <input type="text" name="fuel" placeholder="Brændstof type">
+    <br>
+    <label>C02 pr liter</label>
+    <input type="text" name="c02" placeholder="C02 udslip pr liter">
+    <br>
+    <label>Km pr liter</label>
+    <input type="text" name="kmPrLiter" placeholder="Km pr liter">
+    <br>
+    <label>Skader</label>
+    <input type="text" name="damages" placeholder="Skader på bil">
+    <br>
+    <label>Ledighed</label>
+    <input type="text" name="availability" placeholder="Ledig eller udlejet">
+    <br>
+    <input type="submit" value="Gem bil" style="background-color: white">
+    <br>
+</form>
+</div>
+</body>
+</html>
