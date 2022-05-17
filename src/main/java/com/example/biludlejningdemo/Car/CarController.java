@@ -17,7 +17,7 @@ public class CarController {
     public String cars(Model model){
         List<Car> carList = carService.fetchAll();
         model.addAttribute("cars", carList);
-        String msg = ("Antal biler i alt: " +totalNumberOfCars(carList)+" biler");
+        String msg = ("Antal biler i alt: " +totalNumberOfCars(carList));
         model.addAttribute("message",msg);
         return "/cars";
     }

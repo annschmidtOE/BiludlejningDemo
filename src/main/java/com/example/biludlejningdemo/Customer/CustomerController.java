@@ -19,7 +19,7 @@ public class CustomerController {
     public String customers(Model model){
         List<Customer> customerList = customerService.fetchAll();
         model.addAttribute("customers", customerList);
-        String msg = ("Antal kunder: " +numberOfCustomers(customerList)+" kunder");
+        String msg = ("Antal kunder i alt: " +numberOfCustomers(customerList));
         model.addAttribute("message",msg);
         return "/customers";
     }

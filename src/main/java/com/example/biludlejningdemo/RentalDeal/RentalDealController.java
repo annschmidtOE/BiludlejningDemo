@@ -19,9 +19,9 @@ public class RentalDealController {
     public String rentalDeal(Model model){
         List<RentalDeal> rentalDealList = rentalDealService.fetchAll();
         model.addAttribute("rentalDeals", rentalDealList);
-        String msg = ("Forventet betaling denne måned: "+expectedPayment((ArrayList<RentalDeal>) rentalDealList)+" kr");
+        String msg = ("Forventet betaling denne måned: "+expectedPayment((ArrayList<RentalDeal>) rentalDealList)+",-");
         model.addAttribute("message",msg);
-        String msg1 = ("Antal udlejede biler denne måned: "+rentedCars(rentalDealList)+" biler");
+        String msg1 = ("Aktive lejekontrakter denne måned: "+rentedCars(rentalDealList));
         model.addAttribute("message1",msg1);
         return "/rentalDeals";
     }
