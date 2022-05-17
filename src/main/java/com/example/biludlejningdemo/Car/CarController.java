@@ -18,6 +18,8 @@ public class CarController {
     public String cars(Model model){
         List<Car> carList = carService.fetchAll();
         model.addAttribute("cars", carList);
+        String msg = ("Antal biler i alt: " +totalNumberOfCars(carList)+" biler");
+        model.addAttribute("message",msg);
         return "/cars";
     }
 
@@ -30,6 +32,11 @@ public class CarController {
     public String create(@ModelAttribute Car car){
         carService.createCar(car);
         return "redirect:/";
+    }
+
+    public int totalNumberOfCars(List<Car> carList){
+        int cars = carList.size();
+        return cars;
     }
 
 }

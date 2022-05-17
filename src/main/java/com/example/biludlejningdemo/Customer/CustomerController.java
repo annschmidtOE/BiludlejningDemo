@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -18,10 +19,10 @@ public class CustomerController {
     public String customers(Model model){
         List<Customer> customerList = customerService.fetchAll();
         model.addAttribute("customers", customerList);
-        System.out.println(customerList);
+        String msg = ("Antal kunder: " +numberOfCustomers(customerList)+" kunder");
+        model.addAttribute("message",msg);
         return "/customers";
     }
-
 
     @GetMapping("/newCustomer.html")
     public String newCustomer(){
@@ -33,5 +34,12 @@ public class CustomerController {
         customerService.createCustomer(customer);
         return "redirect:/";
     }
+
+    public int numberOfCustomers(List<Customer> customerList){
+        int customers = customerList.size();
+        return customers;
+    }
+
+
 
 }

@@ -8,17 +8,15 @@ h1{
 
 h2{
     font-size: 30px;
-    color: whitesmoke;
+    color: black;
     align-content: center;
-    float: left;
-    text-shadow: 2px 2px black;
+    margin-left: 700px;
+    font-weight: 600;
 }
 h3{
-    font-size: 25px;
+    font-size: 30px;
+    float: left;
     color: whitesmoke;
-    font-weight: 600;
-    align-content: center;
-    padding-left: 600px;
     text-shadow: 2px 2px black;
 }
 
@@ -43,11 +41,6 @@ td, th{
     border: 2px solid black;
 
 }
-
-h2{
-    size: 25px;
-    color: white;
-    padding-left: 600px;}
 
 
 ul {
@@ -93,4 +86,16 @@ li a:hover:not(.active) {
     font-size: 20px;
     alignment: center;
     align-content: center;
+}
+
+#statistics{
+    font-size: 22px;
+    border: 2px solid darkorange;
+    margin: 10px;
+    float: right;
+    background-color: rgba(100,54,0,0.6);
+    color: black;
+    padding: 20px;
+    width: 30%;
+    font-weight: 600;
 }
