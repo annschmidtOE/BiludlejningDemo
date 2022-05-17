@@ -91,12 +91,8 @@ li a:hover:not(.active) {
 
 #statistics{
     font-size: 22px;
-    border: 2px solid darkorange;
     margin: 10px;
     float: right;
-    background-color: rgba(100,54,0,0.6);
     color: black;
-    padding: 20px;
-    width: 30%;
     font-weight: 600;
 }

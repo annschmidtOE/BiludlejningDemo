@@ -21,7 +21,7 @@ public class RentalDealController {
         model.addAttribute("rentalDeals", rentalDealList);
         String msg = ("Forventet betaling denne måned: "+expectedPayment((ArrayList<RentalDeal>) rentalDealList)+" kr");
         model.addAttribute("message",msg);
-        String msg1 = ("Antal udlejede biler denne måned: "+rentedCars(rentalDealList)+" udlejede biler");
+        String msg1 = ("Antal udlejede biler denne måned: "+rentedCars(rentalDealList)+" biler");
         model.addAttribute("message1",msg1);
         return "/rentalDeals";
     }
